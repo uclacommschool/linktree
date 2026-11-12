@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "SOCIAL_MEDIA_WORKFLOW.html",
+    "href": "SOCIAL_MEDIA_WORKFLOW.html",
+    "title": "Newsletter → Social Media Workflow",
+    "section": "",
+    "text": "One JSON file per month drives everything: the post graphics, the captions tracker (social-media-captions.xlsx), and the Linktree (index.qmd).\nposts/2026-11.json  ──make_post.py──▶  images/Nov 2026/*-final.png  (+ posts/2026-11_preview.png)\n                    ──publish_month.py──▶  social-media-captions.xlsx rows + index.qmd buttons\n\n\n\nPick items. Read the newsletter; skip anything already in the tracker (match on title / link). Aim for one post per newsletter item.\nCollect sources. Save each item’s photo into images/&lt;Mon YYYY&gt;/source/. Resolve tracking links (list-manage.com) to the real destination URL.\nWrite the spec. Copy posts/2026-11.json to posts/&lt;YYYY-MM&gt;.json and fill in one entry per post (image fields + caption + optional linktree).\nRender. python tools/make_post.py posts/&lt;YYYY-MM&gt;.json --preview — check the contact sheet, tweak focus / zoom / headline_pos / wash, re-run with --only &lt;id&gt;.\nPublish to tracker + Linktree. python tools/publish_month.py posts/&lt;YYYY-MM&gt;.json (safe to re-run: tracker rows are matched on the image file name and refreshed; Linktree links already present are skipped). Then quarto render index.qmd and push.\nPick caption options in the tracker, post, mark Posted = Yes.\n\n\n\n\n\n\n\n\n\n\n\nElement\nRule\n\n\n\n\nSize\n1080 × 1350 (IG 4:5 grid)\n\n\nBanner\nUCLA Blue #2774AE, 135 px, white bold ALL-CAPS eyebrow (“NEW REPORT!”, “SAVE THE DATE!”, “WELCOME TO THE TEAM!”)\n\n\nHeadline\nWhite bold on per-line blue boxes, bottom-left. For wide group photos use \"headline_pos\": \"band\": full-width photo with the headline centered on a blue band below, so no faces are covered\n\n\nWash\ntrue for buildings, scenery, archival photos; false for people-focused photos\n\n\nLayouts\nphoto (default) · document (report/brief/journal cover shown whole; omit headline since the cover has the title) · text (no usable photo; headline + detail lines)\n\n\n\n\n\n\n\nTwo options (A = warm/celebratory, B = hook-question or punchier), same hashtag set appended to each.\nEnd with “Link in bio” only when there’s a content_source (and a Linktree entry).\nAlways include ALT TEXT. NOTE flags: photo credits, identifiable minors / media releases, policy-sensitive framing, unconfirmed titles, [confirm @handle] for partner tags.\nStick to the newsletter’s wording for facts; don’t add claims.\n\n\n\n\nSee the docstrings at the top of tools/make_post.py (image fields) and tools/publish_month.py (caption / linktree fields). linktree.section is one of events, news, projects, reports."
+  },
+  {
+    "objectID": "SOCIAL_MEDIA_WORKFLOW.html#steps-each-month",
+    "href": "SOCIAL_MEDIA_WORKFLOW.html#steps-each-month",
+    "title": "Newsletter → Social Media Workflow",
+    "section": "",
+    "text": "Pick items. Read the newsletter; skip anything already in the tracker (match on title / link). Aim for one post per newsletter item.\nCollect sources. Save each item’s photo into images/&lt;Mon YYYY&gt;/source/. Resolve tracking links (list-manage.com) to the real destination URL.\nWrite the spec. Copy posts/2026-11.json to posts/&lt;YYYY-MM&gt;.json and fill in one entry per post (image fields + caption + optional linktree).\nRender. python tools/make_post.py posts/&lt;YYYY-MM&gt;.json --preview — check the contact sheet, tweak focus / zoom / headline_pos / wash, re-run with --only &lt;id&gt;.\nPublish to tracker + Linktree. python tools/publish_month.py posts/&lt;YYYY-MM&gt;.json (safe to re-run: tracker rows are matched on the image file name and refreshed; Linktree links already present are skipped). Then quarto render index.qmd and push.\nPick caption options in the tracker, post, mark Posted = Yes."
+  },
+  {
+    "objectID": "SOCIAL_MEDIA_WORKFLOW.html#house-style-built-into-make_post.py",
+    "href": "SOCIAL_MEDIA_WORKFLOW.html#house-style-built-into-make_post.py",
+    "title": "Newsletter → Social Media Workflow",
+    "section": "",
+    "text": "Element\nRule\n\n\n\n\nSize\n1080 × 1350 (IG 4:5 grid)\n\n\nBanner\nUCLA Blue #2774AE, 135 px, white bold ALL-CAPS eyebrow (“NEW REPORT!”, “SAVE THE DATE!”, “WELCOME TO THE TEAM!”)\n\n\nHeadline\nWhite bold on per-line blue boxes, bottom-left. For wide group photos use \"headline_pos\": \"band\": full-width photo with the headline centered on a blue band below, so no faces are covered\n\n\nWash\ntrue for buildings, scenery, archival photos; false for people-focused photos\n\n\nLayouts\nphoto (default) · document (report/brief/journal cover shown whole; omit headline since the cover has the title) · text (no usable photo; headline + detail lines)"
+  },
+  {
+    "objectID": "SOCIAL_MEDIA_WORKFLOW.html#caption-conventions",
+    "href": "SOCIAL_MEDIA_WORKFLOW.html#caption-conventions",
+    "title": "Newsletter → Social Media Workflow",
+    "section": "",
+    "text": "Two options (A = warm/celebratory, B = hook-question or punchier), same hashtag set appended to each.\nEnd with “Link in bio” only when there’s a content_source (and a Linktree entry).\nAlways include ALT TEXT. NOTE flags: photo credits, identifiable minors / media releases, policy-sensitive framing, unconfirmed titles, [confirm @handle] for partner tags.\nStick to the newsletter’s wording for facts; don’t add claims."
+  },
+  {
+    "objectID": "SOCIAL_MEDIA_WORKFLOW.html#spec-reference",
+    "href": "SOCIAL_MEDIA_WORKFLOW.html#spec-reference",
+    "title": "Newsletter → Social Media Workflow",
+    "section": "",
+    "text": "See the docstrings at the top of tools/make_post.py (image fields) and tools/publish_month.py (caption / linktree fields). linktree.section is one of events, news, projects, reports."
+  }
+]
